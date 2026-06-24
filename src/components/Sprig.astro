@@ -1,0 +1,23 @@
+---
+// Decorative botanical sprig — original SVG line art, sage-green, low opacity.
+// Purely decorative, so hidden from assistive tech.
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+<svg
+  class={className}
+  viewBox="0 0 120 120"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.1"
+  stroke-linecap="round"
+  aria-hidden="true"
+>
+  <path d="M30 110 C 45 80, 55 55, 60 25" />
+  <path d="M60 35 C 70 28, 82 28, 90 34 C 82 42, 70 44, 60 40 Z" />
+  <path d="M55 52 C 44 46, 33 47, 26 53 C 34 60, 45 61, 55 56 Z" />
+  <path d="M52 70 C 62 64, 73 64, 80 70 C 72 77, 61 78, 52 73 Z" />
+  <path d="M48 88 C 38 83, 28 84, 22 90 C 29 96, 39 97, 48 91 Z" />
+</svg>

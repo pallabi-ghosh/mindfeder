@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+
+const services = [
+  {
+    id: 'individual-counselling',
+    icon: 'lucide:heart-handshake',
+    title: 'Individual Counselling',
+    intro:
+      'A confidential and supportive space to explore emotional challenges, personal concerns, and life transitions.',
+    includes: [
+      'Confidential, supportive one-on-one sessions',
+      'Exploration of emotional challenges, personal concerns and life transitions',
+      'Sessions tailored to your individual needs',
+    ],
+    helps: [
+      'Gaining emotional clarity',
+      'Regulating emotions effectively',
+      'Developing healthier coping strategies for everyday life',
+    ],
+  },
+  {
+    id: 'corporate',
+    icon: 'lucide:building-2',
+    title: 'Corporate Mental Health Programs',
+    intro:
+      'Structured workplace wellbeing interventions designed to support employees and build healthier work environments.',
+    includes: [
+      'Individual counselling sessions for employees',
+      'Group wellbeing & psychoeducational sessions',
+      'Leadership training & managerial support',
+      'Burnout & stress management programs',
+      'Mental health awareness talks / webinars',
+      'Workplace conflict management sessions',
+      'Mindfulness & stress regulation sessions',
+    ],
+    helps: [
+      'Reducing stress and burnout',
+      'Improving emotional regulation and resilience',
+      'Strengthening leadership and communication',
+      'Enhancing workplace wellbeing and culture',
+    ],
+  },
+  {
+    id: 'workshops',
+    icon: 'lucide:book-open',
+    title: 'Psychoeducational Workshops',
+    intro:
+      'Interactive learning spaces that translate psychological concepts into practical life skills.',
+    includes: [
+      'Interactive learning sessions based on psychological concepts',
+      'Guided activities and reflection-based exercises',
+      'Topics like emotional regulation, stress management, communication, boundaries and self-awareness',
+    ],
+    helps: [
+      'Developing practical emotional and life skills',
+      'Improving self-awareness and emotional regulation',
+      'Better stress and relationship management',
+      'Applying psychological concepts in daily life',
+    ],
+  },
+  {
+    id: 'community',
+    icon: 'lucide:users-round',
+    title: 'Curated Community Experiences',
+    intro:
+      'Facilitated group spaces designed for connection, reflection, and shared emotional experience.',
+    includes: [
+      'Art-based creative activities',
+      'Games and interactive group exercises',
+      'Guided discussions and sharing circles',
+      'Reflective prompts and experiential activities',
+    ],
+    helps: [
+      'Relaxation and emotional ease',
+      'A sense of connection and belonging',
+      'Light emotional expression (non-therapeutic space)',
+      'Shared community experience',
+    ],
+  },
+];
+---
+
+<Layout title="Services — Mindfeder" description="Counselling, corporate wellbeing programs, psychoeducational workshops and curated community experiences.">
+  <!-- Page header -->
+  <section class="bg-cream">
+    <div class="mx-auto max-w-6xl px-5 py-16 text-center md:py-20">
+      <p class="text-sm font-medium uppercase tracking-widest text-sage">What we offer</p>
+      <h1 class="mt-3 font-display text-4xl text-forest-deep md:text-5xl">Our Services</h1>
+      <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted">
+        Psychology-informed support for individuals, organisations and communities — from one-on-one
+        counselling to workplace programs and reflective group spaces.
+      </p>
+    </div>
+  </section>
+
+  <!-- Quick nav cards -->
+  <section class="mx-auto max-w-6xl px-5 -mt-6">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {services.map((s) => (
+        <a href={`#${s.id}`} class="group rounded-xl border border-black/5 bg-cream-soft p-5 transition hover:border-forest/20 hover:shadow-sm">
+          <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-cream text-forest">
+            <Icon name={s.icon} class="h-5 w-5" />
+          </div>
+          <h2 class="font-display text-lg leading-snug text-forest-deep">{s.title}</h2>
+          <span class="mt-2 inline-flex items-center gap-1 text-sm text-forest/80 group-hover:gap-2 transition-all">
+            Learn more <Icon name="lucide:arrow-right" class="h-4 w-4" />
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Detail sections -->
+  <div class="mx-auto max-w-4xl px-5 py-16 md:py-20">
+    {services.map((s, i) => (
+      <section id={s.id} class:list={['scroll-mt-24 py-10', i !== 0 && 'border-t border-black/5']}>
+        <div class="flex items-center gap-3">
+          <div class="flex h-11 w-11 items-center justify-center rounded-full bg-cream text-forest">
+            <Icon name={s.icon} class="h-5 w-5" />
+          </div>
+          <h2 class="font-display text-2xl text-forest-deep md:text-3xl">{s.title}</h2>
+        </div>
+        <p class="mt-4 max-w-2xl text-base leading-relaxed text-muted">{s.intro}</p>
+
+        <div class="mt-7 grid gap-8 sm:grid-cols-2">
+          <div>
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-sage">What it includes</h3>
+            <ul class="mt-3 space-y-2.5">
+              {s.includes.map((item) => (
+                <li class="flex gap-2.5 text-sm leading-relaxed text-ink/85">
+                  <Icon name="lucide:check" class="mt-0.5 h-4 w-4 shrink-0 text-forest" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-sage">What it helps with</h3>
+            <ul class="mt-3 space-y-2.5">
+              {s.helps.map((item) => (
+                <li class="flex gap-2.5 text-sm leading-relaxed text-ink/85">
+                  <Icon name="lucide:sprout" class="mt-0.5 h-4 w-4 shrink-0 text-forest" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <!-- CTA -->
+    <div class="mt-12 rounded-2xl bg-cream px-6 py-10 text-center">
+      <h2 class="font-display text-2xl text-forest-deep">Not sure where to start?</h2>
+      <p class="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted">
+        Reach out and we’ll help you find the right kind of support for you, your team or your community.
+      </p>
+      <a href="/contact" class="mt-6 inline-block rounded-md bg-forest-deep px-6 py-3 text-sm font-medium text-cream transition hover:bg-forest">
+        Get in touch
+      </a>
+    </div>
+  </div>
+</Layout>

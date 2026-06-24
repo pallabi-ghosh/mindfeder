@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sprig from '../components/Sprig.astro';
+import { Icon } from 'astro-icon/components';
+
+const inside = [
+  'Weekly reflection prompts',
+  'Stress release and grounding activities',
+  'Mindfulness-based exercises',
+  'Space to track thoughts and emotional patterns',
+  'Light creative breaks for mental rest',
+];
+---
+
+<Layout title="Shop — Mindfeder" description="Thoughtfully created mental health tools designed to support reflection, emotional wellbeing and everyday work life.">
+  <section class="bg-cream">
+    <div class="mx-auto max-w-4xl px-5 py-16 text-center md:py-20">
+      <p class="text-sm font-medium uppercase tracking-widest text-sage">Shop</p>
+      <h1 class="mt-3 font-display text-4xl text-forest-deep md:text-5xl">Tools for reflection &amp; everyday wellbeing</h1>
+      <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted">
+        Thoughtfully created mental health tools designed to support reflection, emotional wellbeing
+        and everyday work life.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-5xl px-5 py-16">
+    <div class="grid gap-10 md:grid-cols-2 md:items-start">
+      <!-- Product image -->
+      <div class="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-2xl bg-forest/10">
+        <Sprig class="absolute right-5 top-5 h-20 w-20 text-forest/20" />
+        <p class="font-display text-2xl italic text-forest/55">Journal cover photo</p>
+      </div>
+
+      <!-- Product details -->
+      <div id="about-journal">
+        <p class="text-xs font-semibold uppercase tracking-widest text-sage">Featured journal</p>
+        <h2 class="mt-2 font-display text-3xl text-forest-deep">My Corporate Survival Kit</h2>
+        <p class="mt-1 text-sm text-muted">A Mental Health Journal for Work Life</p>
+        <p class="mt-1 text-sm italic text-muted">by Kumarica Dutta · Mindfeder</p>
+
+        <p class="mt-5 text-base leading-relaxed text-muted">
+          A guided mental health journal designed to help you slow down, reflect, and navigate work life
+          with more clarity and ease. Created as a gentle space for emotional check-ins, stress release,
+          and mindful pauses during busy workdays. Not about productivity — this journal is about creating
+          space for yourself.
+        </p>
+
+        <div class="mt-6">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-sage">What’s inside</h3>
+          <ul class="mt-3 space-y-2">
+            {inside.map((item) => (
+              <li class="flex gap-2.5 text-sm leading-relaxed text-ink/85">
+                <Icon name="lucide:check" class="mt-0.5 h-4 w-4 shrink-0 text-forest" />{item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mt-7 flex items-baseline gap-2">
+          <span class="font-display text-3xl text-forest-deep">₹1,200</span>
+        </div>
+
+        <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+          <a href="/contact" class="rounded-md bg-forest-deep px-6 py-3 text-center text-sm font-medium text-cream transition hover:bg-forest">Buy Now</a>
+          <a href="#" class="rounded-md border border-forest/30 px-6 py-3 text-center text-sm font-medium text-forest transition hover:bg-cream-soft">Preview Sample Pages</a>
+        </div>
+        <p class="mt-3 text-xs text-muted">Secure checkout — you’ll be guided through payment and confirmation.</p>
+      </div>
+    </div>
+
+    <!-- Why this journal -->
+    <div class="mt-16 rounded-2xl bg-cream px-6 py-10 text-center">
+      <h2 class="font-display text-2xl text-forest-deep">Why this journal</h2>
+      <p class="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted">
+        Designed for moments when work feels overwhelming, stressful or emotionally draining. It helps you
+        pause, reset, and reconnect with yourself.
+      </p>
+    </div>
+  </div>
+</Layout>

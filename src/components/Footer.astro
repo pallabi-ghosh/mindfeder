@@ -1,0 +1,41 @@
+---
+const quickLinks = ['Home', 'About', 'Services', 'Experiences', 'Reflections', 'Shop', 'Contact'];
+---
+
+<footer class="mt-24 border-t border-black/5 bg-cream">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <div class="flex items-center gap-2">
+        <span class="font-display text-lg font-semibold tracking-wide text-forest-deep">MINDFEDER</span>
+      </div>
+      <p class="mt-3 text-sm leading-relaxed text-muted">A psychology-based space for healing, reflection and meaningful change.</p>
+    </div>
+
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-muted">Founded by</h3>
+      <p class="mt-3 font-display text-lg text-forest-deep">Kumarica Dutta</p>
+      <p class="text-sm text-muted">Counselling Psychologist</p>
+    </div>
+
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-muted">Quick links</h3>
+      <ul class="mt-3 space-y-1.5">
+        {quickLinks.map((l) => (
+          <li><a href={`/${l.toLowerCase() === 'home' ? '' : l.toLowerCase()}`} class="text-sm text-ink/75 transition hover:text-forest">{l}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-wider text-muted">Connect</h3>
+      <ul class="mt-3 space-y-2 text-sm text-ink/75">
+        <li>mindfeder.space@gmail.com</li>
+        <li>+91 98765 43210</li>
+        <li>Kolkata, India</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-black/5">
+    <p class="mx-auto max-w-6xl px-5 py-5 text-center text-xs text-muted">© 2024 Mindfeder Mental Health Space. All rights reserved.</p>
+  </div>
+</footer>
