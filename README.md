@@ -16,7 +16,7 @@ Responsive site built with Astro + Tailwind. Six pages: Home, About, Services, E
 The contact form uses Netlify Forms (data-netlify="true"). Submissions appear in the
 Netlify dashboard under "Forms" once deployed. No backend needed.
 
-## Still to wire up (needs Kumarica's input)
+## Still to wire up
 - Real images: hero, About photo, journal cover (placeholders in place now)
 - Shop "Buy Now": replace the placeholder href with a real Razorpay payment link
 - Booking: embed Cal.com / Calendly on a "Book a Session" page
