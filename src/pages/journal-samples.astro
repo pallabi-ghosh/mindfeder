@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout title="Journal Sample Pages — Mindfeder" description="Preview sample pages from the Mindfeder journal.">
+  <section class="bg-cream">
+    <div class="mx-auto max-w-4xl px-5 py-16 text-center md:py-20">
+      <p class="text-sm font-medium uppercase tracking-widest text-sage">Journal samples</p>
+      <h1 class="mt-3 font-display text-4xl text-forest-deep md:text-5xl">Preview the journal pages</h1>
+      <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted">
+        Explore a few sample pages from the journal to get a feel for the design, prompts, and overall mood before purchasing.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-6xl px-5 py-16">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
+        <img src="/public/journal_back.png" alt="Journal sample page 1" class="h-96 w-full object-cover" />
+        <div class="p-6">
+          <h2 class="font-display text-2xl text-forest-deep">Cover and brand style</h2>
+          <p class="mt-3 text-sm leading-relaxed text-muted">
+            The journal cover and visual tone capture the gentle, grounded aesthetic of the Mindfeder brand.
+          </p>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
+        <img src="/public/habit_journal.png" alt="Journal sample page 2" class="h-96 w-full object-cover" />
+        <div class="p-6">
+          <h2 class="font-display text-2xl text-forest-deep">Habit tracking page</h2>
+          <p class="mt-3 text-sm leading-relaxed text-muted">
+            A simple, clean layout for tracking daily habits and reflecting on progress.
+          </p>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
+        <img src="/public/journal_review.png" alt="Journal sample page 2" class="h-96 w-full object-cover" />
+        <div class="p-6">
+          <h2 class="font-display text-2xl text-forest-deep">Review page</h2>
+          <p class="mt-3 text-sm leading-relaxed text-muted">
+            A dedicated space for reflecting on the week, identifying patterns, and setting intentions for the upcoming week.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
