@@ -17,6 +17,19 @@ import { Icon } from 'astro-icon/components';
   <div class="mx-auto max-w-6xl px-5 py-16">
     <div class="grid gap-8 md:grid-cols-2">
       <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
+        <video controls class="h-96 w-full object-cover" poster="/cover.png">
+          <source src="/journal_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="p-6">
+          <h2 class="font-display text-2xl text-forest-deep">Corporate journal preview</h2>
+          <p class="mt-3 text-sm leading-relaxed text-muted">
+            Watch a short preview of the corporate journal in use to understand how the pages feel and flow.
+          </p>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
         <img src="/back.png" alt="Journal sample page 1" class="h-96 w-full object-cover" />
         <div class="p-6">
           <h2 class="font-display text-2xl text-forest-deep">Cover and brand style</h2>
