@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Reflections — Mind Feed" description="Thoughtful reflections, journal-style posts and insights from Mind Feed.">
+  <section class="bg-cream">
+    <div class="mx-auto max-w-5xl px-5 py-16 text-center md:py-20">
+      <p class="text-sm font-medium uppercase tracking-widest text-sage">Reflections</p>
+      <h1 class="mt-3 font-display text-4xl text-forest-deep md:text-5xl">Thoughtful notes, journal entries and reflections</h1>
+      <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted">
+        This page is a dedicated space for short reflections, insights, and journal-style posts from Mind Feed.
+        Add new reflections here by creating new pages under <code class="rounded bg-cream px-1.5 py-0.5 text-xs text-forest">src/pages/reflections/</code>.
+      </p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-5xl px-5 pb-16">
+    <div class="grid gap-6 md:grid-cols-2">
+      <article class="rounded-3xl border border-black/5 bg-cream-soft p-8">
+        <p class="text-xs uppercase tracking-[0.24em] text-sage">Reflection starter</p>
+        <h2 class="mt-3 font-display text-2xl text-forest-deep">How journaling can support emotional clarity</h2>
+        <p class="mt-4 text-sm leading-relaxed text-ink/80">
+          Regular reflection helps make sense of emotions, build awareness and create more ease in daily life. Use this space to explore small observations, intentions and moments of growth.
+        </p>
+      </article>
+      <article class="rounded-3xl border border-black/5 bg-cream-soft p-8">
+        <p class="text-xs uppercase tracking-[0.24em] text-sage">Quick note</p>
+        <h2 class="mt-3 font-display text-2xl text-forest-deep">Add a new post by creating a page</h2>
+        <p class="mt-4 text-sm leading-relaxed text-ink/80">
+          Create a new file like <code class="rounded bg-cream px-1.5 py-0.5 text-xs text-forest">src/pages/reflections/my-reflection.astro</code>, then link to it from this page if you want.
+        </p>
+      </article>
+    </div>
+  </div>
+</Layout>
