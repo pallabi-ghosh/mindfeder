@@ -11,11 +11,15 @@ const reasons = [
 ---
 
 <Layout title="Contact — Mindfeder" description="Get in touch with Mindfeder for counselling, corporate programs, workshops, experiences or journal enquiries.">
-  <section class="bg-cream">
-    <div class="mx-auto max-w-4xl px-5 py-16 text-center md:py-20">
-      <p class="text-sm font-medium uppercase tracking-widest text-sage">Let’s work together</p>
+  <section class="relative overflow-hidden bg-cream">
+    <div class="absolute inset-0">
+      <img src="/image2.png" alt="Contact background" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-cream/30"></div>
+    </div>
+    <div class="relative mx-auto max-w-4xl px-5 py-16 text-center md:py-20">
+      <p class="text-sm font-medium uppercase tracking-widest text-forest-deep">Let’s work together</p>
       <h1 class="mt-3 font-display text-4xl text-forest-deep md:text-5xl">We’d love to hear from you.</h1>
-      <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted">
+      <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-forest-deep">
         Whether you’re looking for support, collaboration, or more information about sessions and programs,
         feel free to reach out.
       </p>
@@ -36,7 +40,7 @@ const reasons = [
         </ul>
         <div class="mt-8 space-y-3 text-sm text-ink/85">
           <p class="flex items-center gap-2.5"><Icon name="lucide:mail" class="h-4 w-4 text-forest" /> Kumarica.dutta@gmail.com</p>
-          <p class="flex items-center gap-2.5"><Icon name="lucide:phone" class="h-4 w-4 text-forest" /> +91 91632 98741</p>
+          <p class="flex items-center gap-2.5"><Icon name="lucide:phone" class="h-4 w-4 text-forest" /> +91 8390374421</p>
         </div>
         <p class="mt-8 text-xs leading-relaxed text-muted">
           We aim to respond within 24–48 hours. Your details are used only to respond to your enquiry and are kept confidential.
@@ -60,7 +64,7 @@ const reasons = [
               <input id="email" name="email" type="email" required class="mt-1.5 w-full rounded-md border border-black/10 bg-white px-3 py-2.5 text-sm outline-none focus:border-forest focus:ring-1 focus:ring-forest" />
             </div>
             <div>
-              <label for="phone" class="block text-sm font-medium text-ink/85">Phone <span class="text-muted">(optional)</span></label>
+              <label for="phone" class="block text-sm font-medium text-ink/85">Phone</label>
               <input id="phone" name="phone" type="tel" class="mt-1.5 w-full rounded-md border border-black/10 bg-white px-3 py-2.5 text-sm outline-none focus:border-forest focus:ring-1 focus:ring-forest" />
             </div>
           </div>
