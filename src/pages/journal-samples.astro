@@ -4,11 +4,11 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <Layout title="Journal Sample Pages — Mindfeder" description="Preview sample pages from the Mindfeder journal.">
-  <section class="bg-cream">
-    <div class="mx-auto max-w-4xl px-5 py-16 text-center md:py-20">
-      <p class="text-sm font-medium uppercase tracking-widest text-sage">Journal samples</p>
+  <section class="bg-cream" style="background-image: url('/image5.png'); background-size: cover; background-position: center;">
+    <div class="mx-auto max-w-4xl px-5 py-16 text-center md:py-20 inset-0 bg-cream/43">
+      <p class="text-sm font-medium uppercase tracking-widest text-forest-deep">Journal samples</p>
       <h1 class="mt-3 font-display text-4xl text-forest-deep md:text-5xl">Preview the journal pages</h1>
-      <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted">
+      <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-forest-deep">
         Explore a few sample pages from the journal to get a feel for the design, prompts, and overall mood before purchasing.
       </p>
     </div>
@@ -17,7 +17,7 @@ import { Icon } from 'astro-icon/components';
   <div class="mx-auto max-w-6xl px-5 py-16">
     <div class="grid gap-8 md:grid-cols-2">
       <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
-        <video controls class="h-96 w-full object-cover" poster="/cover.png">
+        <video controls class=" w-full object-cover" poster="/cover.png">
           <source src="/journal_video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -30,7 +30,7 @@ import { Icon } from 'astro-icon/components';
       </div>
 
       <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
-        <img src="/back.png" alt="Journal sample page 1" class="h-96 w-full object-cover" />
+        <img src="/back.png" alt="Journal sample page 1" class=" w-full object-cover" />
         <div class="p-6">
           <h2 class="font-display text-2xl text-forest-deep">Cover and brand style</h2>
           <p class="mt-3 text-sm leading-relaxed text-muted">
@@ -40,7 +40,7 @@ import { Icon } from 'astro-icon/components';
       </div>
 
       <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
-        <img src="/habit.png" alt="Journal sample page 2" class="h-96 w-full object-cover" />
+        <img src="/habit.png" alt="Journal sample page 2" class=" w-full object-cover" />
         <div class="p-6">
           <h2 class="font-display text-2xl text-forest-deep">Habit tracking page</h2>
           <p class="mt-3 text-sm leading-relaxed text-muted">
@@ -50,7 +50,7 @@ import { Icon } from 'astro-icon/components';
       </div>
 
       <div class="overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm">
-        <img src="/review.png" alt="Journal sample page 2" class="h-96 w-full object-cover" />
+        <img src="/review.png" alt="Journal sample page 2" class=" w-full object-cover" />
         <div class="p-6">
           <h2 class="font-display text-2xl text-forest-deep">Review page</h2>
           <p class="mt-3 text-sm leading-relaxed text-muted">
